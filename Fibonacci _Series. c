@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int main()
+{
+  int n ; 
+  printf("enter the index of fib series:");
+  scanf("%d",&n);
+
+  int fib[n+1];
+
+  fib[0]=0;
+  fib[1]=1;
+
+  for(int i = 2;i<=n;i++)
+ {
+    fib[i] = fib[i-1]+fib[i-2];
+ }
+
+ printf("\nFib number at your wanted index:%d\n",fib[n]);
+
+ printf("The Fibonacci series is:");
+ for(int i=0;i<=n;i++)
+ {
+    printf("%d",fib[i]);
+  }
+  return 0;
+}
+
